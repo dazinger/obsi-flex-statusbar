@@ -1,0 +1,53 @@
+:root {
+  --numItemsPerCol: 7;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column
+}
+.workspace-window {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.side-dock-actions {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.mod-vertical.mod-root {
+  position: relative;
+  resize: vertical;
+  display: flex;
+  flex-grow: 1;
+}
+.mod-left-split {
+  position: relative;
+  resize: vertical;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}  
+.mod-right-split {
+  position: relative;
+  resize: vertical;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.status-bar {
+  position: relative;
+  display: grid;
+  height: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: repeat(auto-fill, minmax(15px, 120px));
+  grid-template-columns: repeat(var(--numItemsPerCol), minmax(min-content, 100%));
+}
+.status-bar-item {
+  height: 15px;
+  transform: scale(0.90, 0.90);
+  white-space: nowrap;
+}
